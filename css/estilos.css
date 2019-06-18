@@ -1,0 +1,325 @@
+body {
+  background: url("../img/44.png") no-repeat;
+  background-size: cover;
+  font-size: 20px;
+  padding-top: 80px;
+  font-family: sans-serif;
+}
+header {
+  background: #2a2a2a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.menu {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu .logo {
+  display: inline-block;
+  margin-right: 1em;
+}
+.menu .logo .pc {
+  color: #f00;
+  text-decoration: none;
+  font-size: 20px;
+}
+.menu .logo .pc .pcc {
+  font-size: 40px;
+}
+.menu .btn-menu {
+  display: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+.menu .enlaces {
+  display: inline-block;
+  text-align: right;
+}
+.menu .enlaces a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  text-align: center;
+  font-size: 1em;
+}
+.menu .enlaces a:hover {
+  background: #ffa500;
+  color: #f00;
+}
+.menu .enlaces a i {
+  margin-right: 5px;
+}
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "uno dos tres";
+}
+main .uno {
+  grid-area: uno;
+  justify-self: center;
+}
+main .dos {
+  grid-area: dos;
+  justify-self: center;
+}
+main .tres {
+  grid-area: tres;
+  justify-self: center;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.uno:hover .unos,
+.dos:hover .unos,
+.tres:hover .unos {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+}
+.unos {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+}
+.unos .front,
+.unos .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.unos .front {
+  display: block;
+}
+.unos .back {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #f00;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto;
+  background: #c0c0aa /* fallback for old browsers */;
+  background: -webkit-gradient(linear, left top, right top, from(#1cefff), to(#c0c0aa)) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+  background: linear-gradient(to right, #1cefff, #c0c0aa) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+}
+.unos .back .titulo {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+.unos .back hr {
+  height: 3px;
+  background: #fff;
+  border: none;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.dos:hover .doss {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+}
+.doss {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+}
+.doss .font,
+.doss .bck {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.doss .font {
+  display: block;
+}
+.doss .bck {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #f00;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto;
+  background: #b2fefa /* fallback for old browsers */;
+  background: -webkit-gradient(linear, left top, right top, from(#0ed2f7), to(#b2fefa)) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+  background: linear-gradient(to right, #0ed2f7, #b2fefa) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+}
+.doss .bck .titulo {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+.dos .bck hr {
+  height: 3px;
+  background: #fff;
+  border: none;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.tres:hover .tress {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+}
+.tress {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+}
+.tress .frot,
+.tress .bak {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.tress .frot {
+  display: block;
+}
+.tress .bak {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #f00;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto;
+  background: #200122 /* fallback for old browsers */;
+  background: -webkit-gradient(linear, left top, right top, from(#6f0000), to(#200122)) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+  background: linear-gradient(to right, #6f0000, #200122) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+}
+.tress .bak .titulo {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+.tres .bak hr {
+  height: 3px;
+  background: #fff;
+  border: none;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.footer {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  background: #2a2a2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-areas: "uno uno uno" "dos dos dos" "tres tres tres";
+  }
+}
+@media screen and (max-width: 920px) {
+  header .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .menu .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+  }
+  header .menu .logo .btn-menu {
+    display: inline-block;
+  }
+  header .menu .enlaces {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (max-width: 390px) {
+  header .menu .logo .pc {
+    font-size: 18px;
+  }
+}
