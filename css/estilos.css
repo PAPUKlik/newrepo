@@ -296,10 +296,17 @@ a {
 .texto {
   width: 100%;
 }
+.esto-serarojo {
+  color: #f00;
+}
+.tamano {
+  font-size: 30px;
+  font-weight: bold;
+}
 .internet {
   margin-top: 20px;
   background: RGBA(218, 165, 32, 0.3);
-  height: 200px;
+  height: 250px;
   width: 100%;
   padding: 20px;
 }
