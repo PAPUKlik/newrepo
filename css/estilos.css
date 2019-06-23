@@ -1,11 +1,16 @@
-body {
-  background: url("../img/44.png") no-repeat;
+.cuerpo {
+  background: url("../img/44.png") no-repeat center;
   background-size: cover;
   font-size: 20px;
-  padding-top: 80px;
+  padding-top: 67px;
   font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-header {
+.cabeta {
   background: #2a2a2a;
   position: fixed;
   width: 100%;
@@ -19,10 +24,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -67,7 +68,27 @@ header {
 .menu .enlaces a i {
   margin-right: 5px;
 }
-main {
+.headroom {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.headroom--pinned {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.headroom--unpinned {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.imagenes {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.container-todo {
   max-width: 1200px;
   margin: 50px auto;
   display: grid;
@@ -76,15 +97,16 @@ main {
   grid-template-rows: 1fr auto;
   grid-template-areas: "uno dos tres";
 }
-main .uno {
+.container-todo .uno {
   grid-area: uno;
   justify-self: center;
+  align-self: center;
 }
-main .dos {
+.container-todo .dos {
   grid-area: dos;
   justify-self: center;
 }
-main .tres {
+.container-todo .tres {
   grid-area: tres;
   justify-self: center;
 }
@@ -92,9 +114,7 @@ a {
   text-decoration: none;
   display: inline-block;
 }
-.uno:hover .unos,
-.dos:hover .unos,
-.tres:hover .unos {
+.uno:hover .unos {
   -webkit-transform: perspective(600px) rotateY(180deg);
           transform: perspective(600px) rotateY(180deg);
 }
@@ -148,6 +168,12 @@ a {
   border: none;
   margin-bottom: 20px;
   opacity: 0.5;
+}
+.unoss {
+  text-align: center;
+}
+.vps {
+  text-decoration: none;
 }
 .dos:hover .doss {
   -webkit-transform: perspective(600px) rotateY(180deg);
@@ -204,6 +230,10 @@ a {
   margin-bottom: 20px;
   opacity: 0.5;
 }
+.dosss {
+  text-align: center;
+  color: #008080;
+}
 .tres:hover .tress {
   -webkit-transform: perspective(600px) rotateY(180deg);
           transform: perspective(600px) rotateY(180deg);
@@ -259,34 +289,88 @@ a {
   margin-bottom: 20px;
   opacity: 0.5;
 }
-.footer {
+.script {
+  color: #ffd700;
+  font-size: 15px;
+}
+.texto {
   width: 100%;
-  margin: 30px auto;
-  text-align: center;
-  background: #2a2a2a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+.internet {
+  margin-top: 20px;
+  background: RGBA(218, 165, 32, 0.3);
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+.servidor {
   color: #fff;
-  padding: 10px;
-  font-size: 18px;
+}
+.amazon {
+  color: #0f0;
+}
+.fornite {
+  background: RGB(255, 140, 0, 0.2);
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+.centrado-parrafo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+.script-adm {
+  background: rgba(128,128,128,0.4);
+  height: 550px;
+  width: 100%;
+  padding: 20px;
+}
+.adm {
+  color: #ffd700;
+}
+.keys {
+  font-size: 40px;
+}
+.centrado {
+  text-align: center;
+}
+.color_texto-ul {
+  color: #0f0;
+}
+.agua {
+  color: #0ff;
+}
+.sin-margen {
+  margin: 0;
+}
+.footer {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: #2a2a2a;
+  color: rgba(255,255,255,0.9);
+  width: 100%;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
-  main {
+  body {
+    padding-top: 85px;
+  }
+  .container-todo {
     grid-template-areas: "uno uno uno" "dos dos dos" "tres tres tres";
   }
 }
 @media screen and (max-width: 920px) {
-  header .menu {
+  body {
+    padding-top: 100px;
+  }
+  .cabeta .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header .menu .logo {
+  .cabeta .logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,10 +384,10 @@ a {
     width: 100%;
     padding: 1em;
   }
-  header .menu .logo .btn-menu {
+  .cabeta .logo .btn-menu {
     display: inline-block;
   }
-  header .menu .enlaces {
+  .cabeta .enlaces {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -317,9 +401,24 @@ a {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .internet {
+    height: auto;
+    width: 100%;
+  }
+  .fornite {
+    height: auto;
+    width: 100%;
+  }
+  .script-adm {
+    height: auto;
+    width: 100%;
+  }
+  .adm {
+    word-wrap: break-word;
+  }
 }
 @media screen and (max-width: 390px) {
-  header .menu .logo .pc {
+  .cabeta .menu .logo .pc {
     font-size: 18px;
   }
 }
